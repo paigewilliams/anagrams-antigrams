@@ -12,4 +12,9 @@ describe(".Words") do
     expect(words.anagram()).to(eq("These words are anagrams"))
   end
 
+  it ("Finds if two words do not contain the same letters")do
+    words = Words.new("cinema", "silent")
+    expect(words.anagram()).to(eq("These words are not anagrams"))
+  end
+
 end
