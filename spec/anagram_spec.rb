@@ -9,11 +9,6 @@ describe(".Words") do
     expect(words.real_word()).to(eq("These words are anagrams."))
   end
 
-  it ("Finds whether two words contain the same letters")do
-    words = Words.new("cinema", "poop")
-    expect(words.real_word()).to(eq("These words are not anagrams."))
-  end
-
   it ("Finds whether two words do not contain the same letters")do
     words = Words.new("cinema", "silent")
     expect(words.real_word()).to(eq("These words are not anagrams."))
@@ -30,7 +25,7 @@ describe(".Words") do
   end
 
   it ("Finds whether an inputted word is an antigram, meaning that none of the letters match.")do
-    words = Words.new("stop", "ruby")
+    words = Words.new("stop", "human")
     expect(words.real_word()).to(eq("These words have no letter matches and are antigrams."))
   end
 
