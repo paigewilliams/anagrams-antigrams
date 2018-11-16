@@ -7,8 +7,8 @@ class Words
 
   def anagram
     if @word1.length === @word2.length
-      @word1_array = @word1.split("")
-      @word2_array = @word2.split("")
+      @word1_array = @word1.downcase.split("")
+      @word2_array = @word2.downcase.split("")
 
       if @word1_array.sort == @word2_array.sort
         "These words are anagrams"

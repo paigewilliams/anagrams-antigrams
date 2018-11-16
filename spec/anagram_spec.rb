@@ -23,4 +23,9 @@ describe(".Words") do
     expect(words.anagram()).to(eq("These words are not anagrams"))
   end
 
+  it ("Finds if two words with different cases have the same contents and length")do
+    words = Words.new("cinema", "Iceman")
+    expect(words.anagram()).to(eq("These words are anagrams"))
+  end
+
 end
