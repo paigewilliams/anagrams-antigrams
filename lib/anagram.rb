@@ -7,6 +7,8 @@ class Words
 
   def anagram
     if @word1.length == @word2.length
+      @word1.split("")
+      @word2.split("")
       true
     end
   end
