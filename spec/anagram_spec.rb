@@ -33,4 +33,9 @@ describe(".Words") do
     words = Words.new("Halley's Comet", "Shall yet come")
     expect(words.anagram()).to(eq("These words are anagrams."))
   end
+
+  it ("Finds if an inputted phrase is an palindrome.")do
+    words = Words.new("kayak", "ruby")
+    expect(words.palindrome()).to(eq("You entered a palindrome!"))
+  end
 end

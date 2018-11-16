@@ -27,5 +27,14 @@ class Words
           "These words have no letter matches and are antigrams."
         end
     end
+
   end
+  def palindrome
+    @word1_reverse = @word1.reverse()
+    @word2_reverse = @word2.reverse()
+
+    if @word1_reverse == @word1 || @word2_reverse = @word2
+      "You entered a palindrome!"
+    end
+  end  
 end
