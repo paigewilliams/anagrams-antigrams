@@ -20,14 +20,14 @@ class Words
     @word_1_clean = @word_1.downcase.gsub(/[^a-z]/i, '').split("")
     @word_2_clean = @word_2.downcase.gsub(/[^a-z]/i, '').split("")
 
-    if @word_1_clean.any? {|x| @word_2_clean.include?(x)}
+    if @word_1_clean.any? {|letter| @word_2_clean.include?(letter)}
       if @word_1_clean.sort == @word_2_clean.sort
-      "These words are anagrams."
+      "'#{@word_1}' and '#{@word_2}' are anagrams."
       else
-      "These words are not anagrams."
+      "'#{@word_1}' and '#{@word_2}' are not anagrams."
       end
     else
-      "These words have no letter matches and are antigrams."
+      "'#{@word_1}' and '#{@word_2}' have no letter matches and are antigrams."
     end
   end
 
