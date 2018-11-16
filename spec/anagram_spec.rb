@@ -33,4 +33,8 @@ describe(".Words") do
     expect(words.anagram()).to(eq("These words have no letter matches and are antigrams"))
   end
 
+  it ("Finds if an inputted phrase is an anagram, antigram or is an actual word.")do
+    words = Words.new("Punishment", "Nine Thumps")
+    expect(words.anagram()).to(eq("These words are anagrams"))
+  end
 end
