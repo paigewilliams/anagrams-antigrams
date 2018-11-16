@@ -34,7 +34,7 @@ describe(".Words") do
   end
 
   it ("Finds if an inputted phrase is an anagram, antigram or is an actual word.")do
-    words = Words.new("Punishment", "Nine Thumps")
+    words = Words.new("Punishment", "Nine Thump's")
     expect(words.anagram()).to(eq("These words are anagrams"))
   end
 end

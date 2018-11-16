@@ -8,13 +8,15 @@ class Words
   def anagram
     @vowels1 = @word1.scan(/[aeiou]/)
     @vowels2 = @word2.scan(/[aeiou]/)
+    @word1_clean = @word1.gsub(/[^a-z]/i, '')
+    @word2_clean = @word2.gsub(/[^a-z]/i, '')
 
     if @vowels1 == [] ||  @vowels2 == []
       "Please enter an actual word!"
 
-    elsif @word1.length == @word2.length
-      @word1_array = @word1.downcase.split("")
-      @word2_array = @word2.downcase.split("")
+    elsif @word1_clean.length == @word2_clean.length
+      @word1_array = @word1_clean.downcase.split("")
+      @word2_array = @word2_clean.downcase.split("")
         if @word1_array.any? {|x| @word2_array.include?(x)}
           if @word1_array.sort == @word2_array.sort
           "These words are anagrams"
@@ -23,7 +25,7 @@ class Words
           end
         else
           "These words have no letter matches and are antigrams"
-        end   
+        end
     end
   end
 end
