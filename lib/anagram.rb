@@ -15,12 +15,15 @@ class Words
     elsif @word1.length == @word2.length
       @word1_array = @word1.downcase.split("")
       @word2_array = @word2.downcase.split("")
-        if @word1_array.sort == @word2_array.sort
+        if @word1_array.any? {|x| @word2_array.include?(x)}
+          if @word1_array.sort == @word2_array.sort
           "These words are anagrams"
-        else
+          else
           "These words are not anagrams"
-        end
-
+          end
+        else
+          "These words have no letter matches and are antigrams"
+        end   
     end
   end
 end

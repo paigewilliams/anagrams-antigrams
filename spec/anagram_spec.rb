@@ -29,8 +29,8 @@ describe(".Words") do
   end
 
   it ("Finds if an inputted word is an antigram, meaning that none of the letters match.")do
-    words = Words.new("trhg", "ruby")
-    expect(words.anagram()).to(eq("Please enter an actual word!"))
+    words = Words.new("stop", "ruby")
+    expect(words.anagram()).to(eq("These words have no letter matches and are antigrams"))
   end
 
 end
