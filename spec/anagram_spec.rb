@@ -7,4 +7,9 @@ describe(".Words") do
     words = Words.new("ruby", "bury")
     expect(words.anagram()).to(eq(true))
   end
+  it ("Finds if two words contain the same letters")do
+    words = Words.new("ruby", "bury")
+    expect(words.anagram()).to(eq("These words are anagrams"))
+  end
+
 end
