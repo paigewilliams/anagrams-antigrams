@@ -18,14 +18,14 @@ describe(".Words") do
     expect(words.anagram()).to(eq("These words are not anagrams"))
   end
 
-  it ("Finds if two words do not contain the same letters and do not have the same length")do
-    words = Words.new("cinema", "ruby")
-    expect(words.anagram()).to(eq("These words are not anagrams"))
-  end
-
   it ("Finds if two words with different cases have the same contents and length")do
     words = Words.new("cinema", "Iceman")
     expect(words.anagram()).to(eq("These words are anagrams"))
+  end
+
+  it ("Finds if an inputted word is a word, which means it contains vowels")do
+    words = Words.new("trhg", "ruby")
+    expect(words.anagram()).to(eq("Please enter an actual word!"))
   end
 
 end
