@@ -1,25 +1,26 @@
 require ('rspec')
 require('pry')
+require('dictionaries')
 require('anagram')
 
 describe(".Words") do
 
-  it ("Finds whether two words contain the same letters")do
+  it ("Finds whether two words contain the same letters.")do
     words = Words.new("cinema", "iceman")
     expect(words.real_word()).to(eq("These words are anagrams."))
   end
 
-  it ("Finds whether two words do not contain the same letters")do
+  it ("Finds whether two words do not contain the same letters.")do
     words = Words.new("cinema", "silent")
     expect(words.real_word()).to(eq("These words are not anagrams."))
   end
 
-  it ("Finds whether two words with different cases have the same contents and length")do
+  it ("Finds whether two words with different cases have the same contents and length.")do
     words = Words.new("cinema", "Iceman")
     expect(words.real_word()).to(eq("These words are anagrams."))
   end
 
-  it ("Finds whether an inputted word is a word, which means it contains vowels")do
+  it ("Finds whether an inputted word is a word, which means it contains vowels.")do
     words = Words.new("trhg", "ruby")
     expect(words.real_word()).to(eq("Please enter an actual word!"))
   end

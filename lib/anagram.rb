@@ -1,15 +1,15 @@
 class Words
 
-  def initialize(word1, word2)
-    @word1 = word1
-    @word2 = word2
+  def initialize(word_1, word_2)
+    @word_1 = word_1
+    @word_2 = word_2
   end
 
   def real_word
-    @vowels1 = @word1.scan(/[aeiou]/)
-    @vowels2 = @word2.scan(/[aeiou]/)
+    @vowels_1 = @word_1.scan(/[aeiou]/)
+    @vowels_2 = @word_2.scan(/[aeiou]/)
 
-    if @vowels1 == [] ||  @vowels2 == []
+    if @vowels_1 == [] ||  @vowels_2 == []
       "Please enter an actual word!"
     else
       anagram()
@@ -17,13 +17,11 @@ class Words
   end
 
   def anagram
-    @word1_clean = @word1.downcase.gsub(/[^a-z]/i, '')
-    @word2_clean = @word2.downcase.gsub(/[^a-z]/i, '')
-    @word1_array = @word1_clean.split("")
-    @word2_array = @word2_clean.split("")
+    @word_1_clean = @word_1.downcase.gsub(/[^a-z]/i, '').split("")
+    @word_2_clean = @word_2.downcase.gsub(/[^a-z]/i, '').split("")
 
-    if @word1_array.any? {|x| @word2_array.include?(x)}
-      if @word1_array.sort == @word2_array.sort
+    if @word_1_clean.any? {|x| @word_2_clean.include?(x)}
+      if @word_1_clean.sort == @word_2_clean.sort
       "These words are anagrams."
       else
       "These words are not anagrams."
@@ -34,9 +32,9 @@ class Words
   end
 
   def palindrome()
-    @word1_reverse = @word1.reverse()
-    @word2_reverse = @word2.reverse()
-    if @word1_reverse == @word1 || @word2_reverse == @word2
+    @word_1_reverse = @word_1.reverse()
+    @word_2_reverse = @word_2.reverse()
+    if @word_1_reverse == @word_1 || @word_2_reverse == @word_2
       "You entered a palindrome!"
 
     end
