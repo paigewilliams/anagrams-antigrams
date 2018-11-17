@@ -31,7 +31,7 @@ class Words
     end
   end
 
-  def palindrome()
+  def palindrome
     word_1_reverse = @word_1.reverse()
     word_2_reverse = @word_2.reverse()
     if word_1_reverse == @word_1 || word_2_reverse == @word_2
