@@ -20,7 +20,7 @@ describe(".Words") do
   end
 
   it ("Finds whether an inputted word is a word, which means it contains vowels.")do
-    words = Words.new("trhg", "ruby")
+    words = Words.new("thrgs", "ruby")
     expect(words.real_word()).to(eq("Please enter an actual word!"))
   end
 
@@ -36,6 +36,6 @@ describe(".Words") do
 
   it ("Finds whether an inputted phrase is an palindrome.")do
     words = Words.new("kayak", "ruby")
-    expect(words.palindrome()).to(eq("You entered a palindrome!"))
+    expect(words.real_word()).to(eq("Your words are not anagrams, but you did enter a palindrome!"))
   end
 end
