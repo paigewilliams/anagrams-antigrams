@@ -18,7 +18,7 @@ This is an exercise in creating custom classes and methods in Ruby. The goal is 
 
 ## Specs  
 
-View specs [here] (https://github.com/paigewilliams/anagrams-antigrams/blob/master/spec/anagram_spec.rb).
+View specs [here](https://github.com/paigewilliams/anagrams-antigrams/blob/master/spec/anagram_spec.rb).
 
 ## Objectives
 
