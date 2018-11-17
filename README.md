@@ -16,7 +16,7 @@ This is an exercise in creating custom classes and methods in Ruby. The goal is 
   4. If phrases are not anagrams, the method should check if they are antigrams. An antigram is a word that does not contain any of the letters another word contains.
   5. Account for multiple words being anagrams or antigrams.
 
-##Specs  
+## Specs  
 
 View specs [here] (https://github.com/paigewilliams/anagrams-antigrams/blob/master/spec/anagram_spec.rb).
 
